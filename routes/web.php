@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('/login/spotify', 'Auth\LoginController@redirectToProvider');
-Route::get('/login/spotify/callback', 'Auth\LoginController@handleProviderCallback');
+Route::get('/auth', 'Auth\LoginController@redirectToProvider');
+Route::get('/auth/callback', 'Auth\LoginController@handleProviderCallback');
 
 Route::get('/', function () {
     return view('welcome');
